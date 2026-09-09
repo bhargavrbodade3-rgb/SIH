@@ -1,0 +1,132 @@
+<USER_REQUEST>
+You are the lead full-stack engineer working directly inside my existing project.
+
+PROJECT:
+AI-DRIVEN INDUSTRIAL APPROVAL & COMPLIANCE MANAGEMENT PLATFORM
+
+TAGLINE:
+“One Platform from Approval Discovery to Document Readiness to Compliance.”
+
+IMPORTANT:
+This is NOT a request to only create a plan or explain what should be done.
+
+You must INSPECT the existing project, MODIFY THE ACTUAL CODE, RUN IT, TEST IT, FIND ERRORS, FIX THEM, and continue until the major user journey works end-to-end.
+
+Do not throw away existing working functionality.
+
+Reuse and improve the existing architecture wherever practical.
+
+============================================================
+PHASE 0 — INSPECT THE EXISTING PROJECT FIRST
+============================================
+
+Before changing anything, inspect:
+
+• complete frontend structure
+• complete backend structure
+• package.json files
+• database configuration
+• models
+• routes
+• API services
+• authentication
+• authorization
+• existing dashboard
+• existing Document Vault
+• existing approval discovery
+• existing checklist
+• existing readiness system
+• existing application tracker
+• existing roadmap
+• existing navigation/sidebar
+• existing modals
+• existing forms
+• existing components
+• existing CSS/design system
+• environment variables
+• API base URLs
+• current errors
+• browser console errors
+• network/API errors
+
+Create an internal understanding of:
+
+ROUTES
+COMPONENTS
+MODELS
+DATABASE TABLES
+API ENDPOINTS
+DATA FLOW
+AUTH FLOW
+DEPENDENCIES
+
+DO NOT replace working functionality unnecessarily.
+
+If something already exists, extend it instead of creating a duplicate implementation.
+
+============================================================
+PHASE 1 — CORE PRODUCT CONCEPT
+==============================
+
+Transform the platform from a simple approval/document list into a:
+
+PERSONALIZED REGULATORY JOURNEY + APPLICATION ASSISTANT.
+
+The user experie
+<truncated 26975 bytes>
+   QUERY / INSPECTION / APPROVAL
+                           │
+                           ▼
+                    RENEWAL / COMPLIANCE                    CREATE BUSINESS PROFILE
+                            │
+                            ▼
+              What type of business?
+                            │
+       ┌────────────┬───────┼───────────┬───────────┐
+       ▼            ▼       ▼           ▼           ▼
+ Manufacturing   Food    Retail      Service    Construction
+       │            │       │           │           │
+       └────────────┴───────┴───────────┴───────────┘
+                            │
+                            ▼
+                 LOCATION + BUSINESS SIZE
+                            │
+                            ▼
+                  PERSONALIZED ROADMAP1. PAN / Business Identity
+       ↓
+2. Udyam Registration
+       ↓
+3. GST Registration
+       ↓
+4. FSSAI
+       ↓
+5. Pollution Consent
+       ↓
+6. Fire NOC
+       ↓
+7. Factory-related approval
+       ↓
+8. Municipal Trade Licence
+       ↓
+9. Other applicable approvalsGST REGISTRATION
+
+Before starting, keep ready:
+
+✓ PAN
+✓ Aadhaar
+✓ Mobile number
+✓ Email
+✓ Business constitution proof
+✓ Principal place of business proof
+✓ Authorized signatory information
+✓ Bank information where applicable
+✓ Other applicable documents
+
+[Check My Documents] and other things
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-06T14:15:31+05:30.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

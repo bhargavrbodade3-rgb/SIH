@@ -1,0 +1,1557 @@
+<USER_REQUEST>
+You are the lead full-stack engineer working directly inside my existing project.
+
+PROJECT:
+AI-DRIVEN INDUSTRIAL APPROVAL & COMPLIANCE MANAGEMENT PLATFORM
+
+TAGLINE:
+“One Platform from Approval Discovery to Document Readiness to Compliance.”
+
+IMPORTANT:
+This is NOT a request to only create a plan or explain what should be done.
+
+You must INSPECT the existing project, MODIFY THE ACTUAL CODE, RUN IT, TEST IT, FIND ERRORS, FIX THEM, and continue until the major user journey works end-to-end.
+
+Do not throw away existing working functionality.
+
+Reuse and improve the existing architecture wherever practical.
+
+============================================================
+PHASE 0 — INSPECT THE EXISTING PROJECT FIRST
+============================================
+
+Before changing anything, inspect:
+
+• complete frontend structure
+• complete backend structure
+• package.json files
+• database configuration
+• models
+• routes
+• API services
+• authentication
+• authorization
+• existing dashboard
+• existing Document Vault
+• existing approval discovery
+• existing checklist
+• existing readiness system
+• existing application tracker
+• existing roadmap
+• existing navigation/sidebar
+• existing modals
+• existing forms
+• existing components
+• existing CSS/design system
+• environment variables
+• API base URLs
+• current errors
+• browser console errors
+• network/API errors
+
+Create an internal understanding of:
+
+ROUTES
+COMPONENTS
+MODELS
+DATABASE TABLES
+API ENDPOINTS
+DATA FLOW
+AUTH FLOW
+DEPENDENCIES
+
+DO NOT replace working functionality unnecessarily.
+
+If something already exists, extend it instead of creating a duplicate implementation.
+
+============================================================
+PHASE 1 — CORE PRODUCT CONCEPT
+==============================
+
+Transform the platform from a simple approval/document list into a:
+
+PERSONALIZED REGULATORY JOURNEY + APPLICATION ASSISTANT.
+
+The user experience should be:
+
+Tell us about your business
+↓
+Understand the business
+↓
+Determine applicable regulations
+↓
+Generate personalized roadmap
+↓
+Identify required documents
+↓
+Check document readiness
+↓
+Explain required information
+↓
+Guide user through application preparation
+↓
+Guide user through official government portal
+↓
+Track application
+↓
+Handle queries/inspection
+↓
+Approval
+↓
+Renewal/compliance
+
+The most important question the dashboard must answer is:
+
+“WHAT DO I NEED TO DO NEXT?”
+
+============================================================
+PHASE 2 — BUSINESS PROFILE ENGINE
+=================================
+
+Create or improve the Business Profile system.
+
+Collect information such as:
+
+• Business/profession type
+• Industry
+• Business activity
+• State
+• District
+• Location
+• Premises type
+• Owned / Rented / Leased / Consent or Shared
+• Approximate investment
+• Employee count
+• Machinery/equipment
+• Electricity requirement
+• Water usage
+• Food handling
+• Manufacturing activity
+• Construction activity
+• Storage activity
+• Vehicle/logistics activity
+• Other configurable sector-specific questions
+
+Use progressive disclosure.
+
+Do NOT show 30 questions at once.
+
+Ask only relevant questions.
+
+Example:
+
+If user selects Food Processing:
+
+show food-related questions.
+
+If user selects IT/Software:
+
+do not show irrelevant food/machinery questions.
+
+If user selects Manufacturing:
+
+show relevant manufacturing questions.
+
+============================================================
+PHASE 3 — MULTI-PROFESSION SUPPORT
+==================================
+
+The platform must not be designed only for one demo business.
+
+Create a configurable regulatory system capable of supporting:
+
+• Manufacturing
+• Food Processing
+• Retail
+• IT / Software
+• Professional Services
+• Construction
+• Logistics
+• Hospitality
+• Healthcare-related businesses
+• Agriculture / Allied activities
+• Workshops
+• Small Shops
+• Other configurable businesses
+
+IMPORTANT:
+
+Do not invent regulations.
+
+If a regulatory rule is not configured, show:
+
+“Regulatory rule not configured for this business type.”
+
+Do not falsely claim an approval is mandatory.
+
+============================================================
+PHASE 4 — REGULATORY RULE ENGINE
+================================
+
+Create a centralized configuration-driven regulatory rules engine.
+
+Each approval should support:
+
+• approval ID
+• approval code
+• name
+• category
+• description
+• applicability conditions
+• applicable business types
+• applicable industries
+• applicable activities
+• location conditions
+• premises conditions
+• investment conditions
+• employee conditions
+• dependencies
+• required documents
+• conditional documents
+• required information
+• application steps
+• field guidance
+• issuing authority
+• official portal URL
+• typical timeline
+• cost information where available
+• renewal information
+• source
+• source URL
+• source/version date
+
+Keep regulatory data separate from UI code.
+
+Do not hard-code all requirements directly inside React components.
+
+============================================================
+PHASE 5 — PERSONALIZED REGULATORY ROADMAP
+=========================================
+
+Create a dynamic roadmap based on:
+
+BUSINESS PROFILE
++
+REGULATORY RULES
++
+DEPENDENCIES
+
+Do NOT give every user the same roadmap.
+
+Example Food Processing:
+
+Business Identity
+↓
+Udyam
+↓
+GST
+↓
+FSSAI
+↓
+Pollution Consent
+↓
+Fire NOC
+↓
+Factory-related approval if applicable
+↓
+Municipal approval
+↓
+Other applicable approvals
+
+Example IT / Software:
+
+Business Identity
+↓
+Udyam
+↓
+GST if applicable
+↓
+Applicable local establishment requirements
+↓
+Other applicable requirements
+
+Example Manufacturing:
+
+Business Identity
+↓
+Udyam
+↓
+GST
+↓
+Factory-related approvals
+↓
+Pollution Consent
+↓
+Fire NOC
+↓
+Electricity/local requirements
+↓
+Municipal approvals
+↓
+Other applicable requirements
+
+These are examples only.
+
+The actual roadmap must be generated by the applicability engine.
+
+============================================================
+PHASE 6 — ROADMAP UI / 2.5D VISUAL DESIGN
+=========================================
+
+Implement a professional enterprise 2.5D roadmap.
+
+NOT gaming.
+
+NOT excessive 3D.
+
+Use:
+
+• subtle depth
+• floating milestone cards
+• connected dependency lines
+• soft shadows
+• layered cards
+• clear status indicators
+• restrained animations
+• smooth transitions
+• professional enterprise colors
+• responsive layout
+
+Each roadmap step should show:
+
+Approval name
+Category
+Status
+Readiness
+Missing documents
+Dependency
+Timeline
+Authority
+Next action
+
+Statuses:
+
+✓ COMPLETED
+🟡 IN PROGRESS
+🔵 AVAILABLE
+🔒 LOCKED
+⚠ NEEDS ATTENTION
+
+Example:
+
+GST Registration
+
+78% Ready
+
+Documents:
+7/9
+
+Information:
+11/13
+
+Missing:
+2
+
+[Continue Application]
+
+============================================================
+PHASE 7 — DEPENDENCY ENGINE
+===========================
+
+Implement real dependency logic.
+
+Example:
+
+Udyam
+↓
+GST
+↓
+FSSAI
+
+If Udyam is completed:
+GST becomes available if applicable.
+
+If GST is incomplete:
+FSSAI can be marked:
+
+LOCKED BY DEPENDENCY
+
+Show why:
+
+“Complete GST preparation before continuing.”
+
+Do not merely change the visual status.
+
+The backend and frontend must agree on dependency state.
+
+============================================================
+PHASE 8 — DOCUMENT VAULT
+========================
+
+Connect the roadmap to the existing Document Vault.
+
+Documents should support:
+
+• PDF
+• JPG
+• PNG
+
+Document Vault should store:
+
+• document ID
+• document name
+• category/type
+• upload date
+• expiry date
+• issuing authority if available
+• status
+• file reference
+• verification state
+• extracted metadata where supported
+
+Statuses:
+
+✓ VALID
+⚠ EXPIRING
+✗ EXPIRED
+✗ MISSING
+
+============================================================
+PHASE 9 — SMART DOCUMENT MATCHING
+=================================
+
+When an approval requires a document, automatically check the Document Vault.
+
+Example:
+
+GST requires:
+
+PAN
+Aadhaar/authentication information
+Business constitution information
+Principal place of business proof
+Authorized signatory information
+Bank information where applicable
+Other applicable supporting documents
+
+The system should show:
+
+✓ PAN — Found
+✓ Address Proof — Found
+⚠ Rent Agreement — Expiring
+✗ Authorized Signatory Document — Missing
+
+Provide:
+
+[Upload]
+[View]
+[Replace]
+
+Do not mark every document as universally mandatory.
+
+Use conditional requirements.
+
+============================================================
+PHASE 10 — PREMISES-BASED DOCUMENT LOGIC
+========================================
+
+This is REQUIRED.
+
+If user selects:
+
+OWNED PREMISES
+
+show relevant ownership/premises evidence.
+
+RENTED PREMISES
+
+show relevant rent/lease and premises evidence.
+
+LEASED PREMISES
+
+show applicable lease evidence.
+
+CONSENT / SHARED PREMISES
+
+show applicable consent/premises evidence.
+
+The document checklist must dynamically change.
+
+Do not show irrelevant documents.
+
+============================================================
+PHASE 11 — DOCUMENT READINESS SCORE
+===================================
+
+Calculate readiness for each approval.
+
+Example:
+
+Documents:
+7 / 9
+
+Information:
+11 / 13
+
+Overall:
+78%
+
+Also show:
+
+Missing documents
+Expiring documents
+Missing information
+Incomplete application steps
+
+Do NOT only display a percentage.
+
+Always explain:
+
+WHY the user is not at 100%.
+
+Example:
+
+“You are 78% ready.
+
+Complete these 2 items:
+
+1. Upload rent agreement
+2. Complete authorized signatory information”
+
+Add:
+
+[Fix These Items]
+
+============================================================
+PHASE 12 — APPLICATION ASSISTANT
+================================
+
+Every approval must have an Application Assistant.
+
+Create reusable components instead of duplicating pages.
+
+Workflow:
+
+1. OVERVIEW
+2. APPLICABILITY
+3. BEFORE YOU START
+4. DOCUMENTS
+5. REQUIRED INFORMATION
+6. APPLICATION STEPS
+7. GOVERNMENT PORTAL GUIDE
+8. FIELD-BY-FIELD HELP
+9. REVIEW
+10. SUBMISSION
+11. TRACKING
+12. QUERY
+13. INSPECTION
+14. APPROVAL
+15. RENEWAL
+
+============================================================
+PHASE 13 — GOVERNMENT PORTAL GUIDANCE
+=====================================
+
+The platform should explain how a user completes the government application.
+
+For example:
+
+GST Registration
+
+STEP 1 OF 8
+
+Before starting:
+
+✓ PAN
+✓ Aadhaar/authentication information
+✓ Business information
+✓ Premises information
+✓ Authorized signatory information
+✓ Other applicable documents
+
+Then:
+
+[Open Official GST Portal]
+
+STEP 2
+
+Registration
+
+Explain:
+
+• where the user should go
+• what option they should choose
+• what information is required
+• what document is needed
+• what they should check before proceeding
+
+Then:
+
+[Mark Step Complete]
+
+Continue to next step.
+
+IMPORTANT:
+
+Do NOT fake the government website.
+
+Do NOT pretend our system has submitted an application unless there is an actual authorized government API integration.
+
+The system should act as:
+
+GUIDE + PREPARATION ASSISTANT + TRACKER.
+
+============================================================
+PHASE 14 — FIELD-BY-FIELD GUIDANCE
+==================================
+
+For difficult application fields, provide:
+
+Field Name
+Explanation
+What information is expected
+Where the information comes from
+Example
+Validation
+Profile autofill option
+Document-derived value if available
+
+Example:
+
+LEGAL NAME
+
+[Use Business Profile]
+
+ⓘ What is this?
+
+“Enter the legal name associated with the applicable business registration.”
+
+Example:
+
+PRINCIPAL PLACE OF BUSINESS
+
+ⓘ What does this mean?
+
+Explain in simple language.
+
+[Use Business Profile Address]
+
+Do not expose sensitive data unnecessarily.
+
+============================================================
+PHASE 15 — DOCUMENT → DATA → APPLICATION CONNECTION
+===================================================
+
+Connect:
+
+Document Vault
++
+Business Profile
++
+Application Guide
+
+Example:
+
+User uploads PAN.
+
+System can identify:
+
+PAN document
+Name
+PAN number where technically supported
+
+Then show:
+
+“Use verified information from your document.”
+
+Do not automatically submit sensitive information to external websites.
+
+Require user confirmation before using sensitive information.
+
+============================================================
+PHASE 16 — APPROVAL-SPECIFIC WORKFLOWS
+======================================
+
+Build reusable configuration-driven workflows for approvals such as:
+
+GST Registration
+Udyam Registration
+FSSAI
+Pollution Consent
+Fire NOC
+Factory-related approval
+Municipal Trade Licence
+Shop & Establishment / applicable local registration
+Other configurable approvals
+
+For each:
+
+Documents
+Information
+Portal steps
+Field guidance
+Dependencies
+Application tracking
+Renewal
+
+must be configurable.
+
+Do NOT create fake identical workflows for every approval.
+
+============================================================
+PHASE 17 — APPLICATION TRACKER
+==============================
+
+Create application tracking.
+
+Statuses:
+
+DRAFT
+READY
+APPLICATION STARTED
+SUBMITTED
+UNDER REVIEW
+QUERY RAISED
+QUERY RESPONDED
+INSPECTION
+APPROVED
+REJECTED
+RENEWAL DUE
+
+Track:
+
+• application ID/reference number
+• approval
+• submission date
+• expected timeline/SLA
+• current status
+• query
+• response
+• inspection
+• notes
+• renewal date
+
+============================================================
+PHASE 18 — QUERY / OBJECTION MANAGEMENT
+=======================================
+
+If department raises a query:
+
+Show:
+
+QUERY RAISED
+
+Approval:
+GST
+
+Query date:
+...
+
+Question/requirement:
+...
+
+Required response/document:
+
+...
+
+Deadline:
+
+...
+
+[Upload Response Document]
+
+[Mark Response Prepared]
+
+[Submit/Mark Responded]
+
+Again, do not claim actual government submission without real integration.
+
+============================================================
+PHASE 19 — INSPECTION MANAGEMENT
+================================
+
+Where an approval involves inspection, show:
+
+Inspection status
+Expected date
+Documents to keep ready
+Preparation checklist
+Notes
+Outcome
+
+Example:
+
+FIRE NOC
+
+Inspection Preparation
+
+✓ Building information
+✓ Layout/plan
+✓ Fire safety equipment information
+⚠ One document missing
+
+[Complete Preparation]
+
+============================================================
+PHASE 20 — RENEWAL & COMPLIANCE
+===============================
+
+After approval:
+
+Track validity.
+
+Example:
+
+GST
+Active
+
+FSSAI
+Expires in 42 days
+
+Fire NOC
+Expires in 75 days
+
+Show:
+
+Upcoming renewals
+Expired approvals
+Compliance tasks
+
+Provide:
+
+[Start Renewal Preparation]
+
+============================================================
+PHASE 21 — DASHBOARD
+====================
+
+Redesign dashboard around:
+
+“WHAT SHOULD I DO NEXT?”
+
+Top section:
+
+BUSINESS:
+ABC Food Processing
+
+ROADMAP:
+6 / 11 completed
+
+CURRENT STEP:
+GST Registration
+
+READINESS:
+78%
+
+NEXT ACTION:
+Upload rent agreement
+
+Button:
+
+[Fix Now]
+
+Other cards:
+
+• Missing Documents
+• Expiring Documents
+• Applications in Progress
+• Department Queries
+• Upcoming Renewals
+• Roadmap Progress
+• Recent Activity
+
+============================================================
+PHASE 22 — AI REGULATORY ASSISTANT
+==================================
+
+Add an AI-style assistant interface.
+
+It should answer questions using the configured regulatory data and user's business profile.
+
+Examples:
+
+“What should I do next?”
+
+“Why do I need this document?”
+
+“Which approval comes after GST?”
+
+“What documents are missing?”
+
+“Why is FSSAI locked?”
+
+“Which documents are expiring?”
+
+“Where do I apply?”
+
+“Explain this application field.”
+
+Always distinguish:
+
+• verified regulatory information
+• configured system rules
+• user-specific inference
+• information requiring official confirmation
+
+Do not invent government requirements.
+
+============================================================
+PHASE 23 — SOURCE / VERIFICATION SYSTEM
+=======================================
+
+Every regulatory rule should support:
+
+Source
+Official source URL
+Version/date
+Last reviewed date
+
+Display:
+
+“Regulatory information last reviewed: DD/MM/YYYY”
+
+Provide:
+
+[View Official Source]
+
+Do not fabricate source URLs.
+
+If a source is not configured, clearly say:
+
+“Official source not configured.”
+
+============================================================
+PHASE 24 — NAVIGATION
+=====================
+
+Ensure sidebar/navigation contains:
+
+Dashboard
+Business Profile
+Regulatory Roadmap
+Find Approvals
+Documents
+Applications
+Queries
+Inspections
+Renewals & Compliance
+AI Assistant
+Notifications
+Settings
+Help
+
+Every item must open a real page.
+
+No dead links.
+
+No blank pages.
+
+No “Coming Soon” for core functionality.
+
+============================================================
+PHASE 25 — ROUTING AUDIT
+========================
+
+Audit EVERY route.
+
+Check:
+
+• route exists
+• component loads
+• authentication works
+• role guard works
+• dynamic IDs work
+• API loads
+• loading state works
+• error state works
+• back navigation works
+• refresh works
+• deep links work
+• 404 fallback exists
+
+Add a proper 404 page.
+
+Add route error boundaries.
+
+Fix redirect loops.
+
+Fix incorrect sidebar routes.
+
+============================================================
+PHASE 26 — BUTTON / INTERACTION AUDIT
+=====================================
+
+EVERY button must do something.
+
+Test:
+
+• Add Document
+• Upload
+• Delete
+• Replace
+• View
+• Continue
+• Next
+• Previous
+• Save
+• Submit
+• Mark Complete
+• Start Application
+• Open Portal
+• Fix Now
+• View Details
+• Close Modal
+• Back
+• Search
+• Filter
+• Status update
+• Reference number save
+• Query response
+• Renewal action
+
+No decorative buttons pretending to work.
+
+============================================================
+PHASE 27 — API CONSISTENCY
+==========================
+
+Audit frontend/backend API contracts.
+
+Check:
+
+• endpoint URLs
+• HTTP methods
+• request fields
+• response fields
+• IDs
+• authentication headers
+• CORS
+• API base URL
+• environment variables
+• error responses
+• loading states
+
+Make frontend and backend use the same field names.
+
+Do not silently swallow API errors.
+
+Show useful error messages.
+
+============================================================
+PHASE 28 — SECURITY
+===================
+
+Implement sensible security.
+
+• validate uploads
+• restrict supported file types
+• validate request data
+• prevent unauthorized document access
+• protect user-specific records
+• do not expose private document URLs unnecessarily
+• sanitize displayed user input
+• do not log sensitive information
+• protect API routes
+• apply role-based authorization where applicable
+
+============================================================
+PHASE 29 — UI/UX
+================
+
+Use the Stitch design if available.
+
+If Stitch-generated design/assets/components already exist, implement them rather than redesigning from scratch.
+
+Design principles:
+
+• enterprise
+• clean
+• modern
+• simple
+• professional
+• responsive
+• accessible
+• fluid
+
+Use:
+
+• skeleton loaders
+• empty states
+• error states
+• success states
+• confirmation dialogs
+• toast notifications
+• subtle transitions
+• sticky important actions
+• clear hierarchy
+
+Animations:
+
+150–300ms.
+
+Avoid excessive animation.
+
+============================================================
+PHASE 30 — RESPONSIVE
+=====================
+
+Desktop:
+
+Sidebar + main workspace.
+
+Tablet:
+
+Collapsible sidebar.
+
+Mobile:
+
+Compact navigation.
+
+Roadmap must remain usable on mobile.
+
+Application assistant should work well on small screens.
+
+Do not allow horizontal overflow.
+
+============================================================
+PHASE 31 — DATA MODEL
+=====================
+
+If the project already has models, extend them.
+
+Otherwise implement appropriate structures for:
+
+BusinessProfile
+RegulatoryRule
+RoadmapStep
+BusinessRoadmapStatus
+Document
+DocumentRequirement
+ApplicationWorkflow
+Application
+ApplicationStep
+ApplicationQuery
+Inspection
+Renewal
+Notification
+
+Use existing database technology.
+
+Do not create a second unnecessary database.
+
+============================================================
+PHASE 32 — REQUIRED ROADMAP DATA
+================================
+
+Seed realistic starter configurations for:
+
+PAN / Business Identity
+Udyam Registration
+GST Registration
+FSSAI
+Pollution Consent
+Fire NOC
+Factory-related approval
+Municipal Trade Licence
+Shop & Establishment / applicable local registration
+Other configurable approvals
+
+The seed data is for development/demo purposes.
+
+Clearly mark demo/test records as DEMO.
+
+Do not represent fabricated data as official government data.
+
+============================================================
+PHASE 33 — DEMO + REAL CONFIGURABILITY
+======================================
+
+The application must work immediately with seeded demo data.
+
+BUT:
+
+Do not build it as a hard-coded demo.
+
+I must be able to create another business profile and receive a different roadmap.
+
+Test at least:
+
+Food Processing
+IT/Software
+Manufacturing
+Retail
+
+The system should change applicable steps and questions according to the business.
+
+============================================================
+PHASE 34 — END-TO-END TEST
+==========================
+
+Perform this complete test.
+
+TEST A — FOOD PROCESSING
+
+1. Create Food Processing business.
+2. Enter Maharashtra location.
+3. Select rented premises.
+4. Complete profile.
+5. Generate roadmap.
+6. Verify applicable approvals.
+7. Open Udyam.
+8. Check documents.
+9. Mark/complete Udyam.
+10. Open GST.
+11. Check document requirements.
+12. Upload a rent agreement.
+13. Verify document appears in vault.
+14. Verify GST readiness changes.
+15. Open GST Application Assistant.
+16. Follow application preparation steps.
+17. Open official portal link.
+18. Mark guidance steps complete.
+19. Create application tracker record.
+20. Add application reference number.
+21. Change status to Submitted.
+22. Return to roadmap.
+23. Verify next applicable approval becomes available.
+
+TEST B — DIFFERENT BUSINESS
+
+Create IT/Software business.
+
+Recalculate roadmap.
+
+Verify the roadmap differs from Food Processing.
+
+TEST C — PREMISES
+
+Change:
+
+Rented → Owned.
+
+Recalculate.
+
+Verify conditional document requirements change.
+
+TEST D — ROUTING
+
+Refresh every major page.
+
+Open dynamic detail pages directly.
+
+Use browser Back/Forward.
+
+Verify no blank screens.
+
+TEST E — ERROR STATES
+
+Test:
+
+• invalid upload
+• missing required field
+• failed API
+• invalid ID
+• unauthorized access
+
+Verify useful error messages.
+
+============================================================
+PHASE 35 — BUILD & DEBUG
+========================
+
+After implementation:
+
+1. install required dependencies
+2. start backend
+3. start frontend
+4. run database migrations if applicable
+5. seed development data
+6. run frontend build
+7. run backend tests
+8. inspect browser console
+9. inspect network tab
+10. test API endpoints
+11. test all routes
+12. test all critical buttons
+13. fix errors
+14. repeat tests
+
+Do not stop after the first successful build.
+
+============================================================
+PHASE 36 — NO DEAD UI
+=====================
+
+Before declaring completion, search the codebase for:
+
+TODO
+FIXME
+Coming Soon
+placeholder buttons
+empty handlers
+console.log-only handlers
+href="#"
+fake navigation
+dead routes
+unimplemented components
+
+Replace core-functionality placeholders with working implementations.
+
+============================================================
+PHASE 37 — PERFORMANCE
+======================
+
+Keep the interface fluid.
+
+Use:
+
+• lazy loading where appropriate
+• debounced search
+• efficient API requests
+• caching where appropriate
+• skeleton loading
+• optimized document previews
+• avoid unnecessary re-renders
+
+Do not sacrifice reliability for visual effects.
+
+============================================================
+PHASE 38 — FINAL PRODUCT EXPERIENCE
+===================================
+
+The final experience should feel like:
+
+USER:
+
+“I want to start a food-processing business.”
+
+PLATFORM:
+
+“Tell me about your business.”
+
+↓
+
+User enters details.
+
+↓
+
+PLATFORM:
+
+“These are the regulatory requirements applicable to you.”
+
+↓
+
+PERSONALIZED ROADMAP:
+
+1. Business Identity ✓
+2. Udyam ✓
+3. GST 🟡
+4. FSSAI 🔒
+5. Pollution Consent 🔒
+6. Fire NOC 🔒
+7. Factory approval 🔒
+8. Municipal approval 🔒
+
+↓
+
+USER:
+
+“What do I do for GST?”
+
+↓
+
+PLATFORM:
+
+“You are 78% ready.”
+
+Missing:
+
+• Rent Agreement
+• Authorized Signatory Information
+
+↓
+
+USER:
+
+“How do I apply?”
+
+↓
+
+PLATFORM:
+
+“Here is the preparation checklist and step-by-step official portal guidance.”
+
+↓
+
+USER:
+
+“I submitted it.”
+
+↓
+
+PLATFORM:
+
+“Enter your application reference number.”
+
+↓
+
+TRACKER:
+
+GST
+Submitted
+Under Review
+
+↓
+
+QUERY:
+
+Department Query Raised
+
+↓
+
+USER:
+
+“Help me respond.”
+
+↓
+
+PLATFORM:
+
+Shows query response workflow.
+
+↓
+
+APPROVAL:
+
+GST Approved.
+
+↓
+
+ROADMAP:
+
+Next applicable approval becomes available.
+
+This is the target product experience.
+
+============================================================
+FINAL INSTRUCTION
+=================
+
+DO NOT ONLY EXPLAIN WHAT YOU WOULD BUILD.
+
+WORK DIRECTLY ON THE EXISTING PROJECT.
+
+INSPECT → PLAN INTERNALLY → IMPLEMENT → RUN → TEST → DEBUG → FIX → RETEST.
+
+Preserve existing functionality.
+
+Do not unnecessarily rewrite the project.
+
+Prioritize:
+
+1. Working routes
+2. Working buttons
+3. Working APIs
+4. Personalized business profiles
+5. Dynamic regulatory applicability
+6. Roadmap dependencies
+7. Document readiness
+8. Application Assistant
+9. Government portal guidance
+10. Application tracking
+11. Query/inspection/renewal
+12. Professional 2.5D UI
+13. Responsive UX
+14. Security
+15. Testing
+
+MOST IMPORTANT:
+
+The platform must NOT be a static demo showing fake screens.
+
+It must be a reusable foundation where I can add new professions, industries, approvals, documents and application workflows through configuration/data instead of rewriting the entire frontend.
+
+Build the actual working system now.
+                    BUSINESS PROFILE
+                           │
+                           ▼
+                  APPLICABILITY ENGINE
+                           │
+                           ▼
+                   REGULATORY ROADMAP
+                           │
+          ┌────────────────┼────────────────┐
+          ▼                ▼                ▼
+     DOCUMENT         INFORMATION       APPLICATION
+       ENGINE            ENGINE            GUIDE
+          │                │                │
+          └────────────────┼────────────────┘
+                           ▼
+                    READINESS ENGINE
+                           │
+                           ▼
+                   NEXT BEST ACTION
+                           │
+                           ▼
+                   GOVERNMENT PORTAL
+                           │
+                           ▼
+                  APPLICATION TRACKER
+                           │
+                           ▼
+              QUERY / INSPECTION / APPROVAL
+                           │
+                           ▼
+                    RENEWAL / COMPLIANCE                    CREATE BUSINESS PROFILE
+                            │
+                            ▼
+              What type of business?
+                            │
+       ┌────────────┬───────┼───────────┬───────────┐
+       ▼            ▼       ▼           ▼           ▼
+ Manufacturing   Food    Retail      Service    Construction
+       │            │       │           │           │
+       └────────────┴───────┴───────────┴───────────┘
+                            │
+                            ▼
+                 LOCATION + BUSINESS SIZE
+                            │
+                            ▼
+                  PERSONALIZED ROADMAP1. PAN / Business Identity
+       ↓
+2. Udyam Registration
+       ↓
+3. GST Registration
+       ↓
+4. FSSAI
+       ↓
+5. Pollution Consent
+       ↓
+6. Fire NOC
+       ↓
+7. Factory-related approval
+       ↓
+8. Municipal Trade Licence
+       ↓
+9. Other applicable approvalsGST REGISTRATION
+
+Before starting, keep ready:
+
+✓ PAN
+✓ Aadhaar
+✓ Mobile number
+✓ Email
+✓ Business constitution proof
+✓ Principal place of business proof
+✓ Authorized signatory information
+✓ Bank information where applicable
+✓ Other applicable documents
+
+[Check My Documents] and other things
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-06T14:15:31+05:30.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

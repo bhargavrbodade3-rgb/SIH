@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+*.db
+*.sqlite3
+
+# Storage
+storage/uploads/*
+storage/packages/*
+!storage/samples/
+
+# Node
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
